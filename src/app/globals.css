@@ -19,13 +19,6 @@
   --color-green: #4b7b2b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--primary-text);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #23272f;
