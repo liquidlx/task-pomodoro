@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f25f8b;
+  --primary-text: #fbfbfb;
+  --secondary-text: #666666;
+  --accent: #f25f8b;
+  --accent-alt: #b8c6db;
+  --rest-accent: #cdeac0;
+  --border: #e0e0e0;
+  --shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.06);
+  --radius: 16px;
+  --font-sans: "Inter", Helvetica, Arial, sans-serif;
+  --bg-color: #23242a;
+  --bg-dark: #292a30;
+  --border: #2d2e36;
+  --text-muted: #b8b8c6;
+  --color-pink: #f25f8b;
+  --color-green: #4b7b2b;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-foreground: var(--primary-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #23272f;
+    --primary-text: #f9f9f9;
+    --secondary-text: #b8c6db;
+    --accent: #a8dadc;
+    --accent-alt: #b8c6db;
+    --rest-accent: #2e473b;
+    --border: #444950;
+    --shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-text);
+  font-family: var(--font-sans);
+  transition: background 0.4s, color 0.4s;
+  margin: 0;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+.soft-shadow {
+  box-shadow: var(--shadow);
+}
+
+.rounded-soft {
+  border-radius: var(--radius);
+}
+
+.fade-scale-enter {
+  opacity: 0;
+  transform: scale(0.98);
+}
+.fade-scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s, transform 0.4s;
+}
+.fade-scale-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-scale-exit-active {
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.3s, transform 0.3s;
 }
