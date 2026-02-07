@@ -4,10 +4,8 @@ A minimalist, modern Pomodoro timer and task manager built with Next.js and Reac
 
 ## Features
 
-- Elegant Notion-inspired dark UI
 - Add, pin, complete, and delete tasks
 - Pomodoro timer with rest periods
-- Track time spent per task
 - Customizable Pomodoro and rest durations
 - Responsive and keyboard-friendly
 
